@@ -24,7 +24,7 @@ public class Usuario {
     @NotBlank
     private String senha;
 
-    private Integer admin;
+    private Boolean admin;
 
     @Column(name = "criado_em")
     private LocalDateTime criadoEm;
@@ -39,7 +39,7 @@ public class Usuario {
         }
 
         if (admin == null) {
-            admin = 0;
+            admin = false;
         }
     }
 
@@ -59,7 +59,7 @@ public class Usuario {
         return senha;
     }
 
-    public Integer getAdmin() {
+    public Boolean getAdmin() {
         return admin;
     }
 
@@ -83,7 +83,7 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public void setAdmin(Integer admin) {
+    public void setAdmin(Boolean admin) {
         this.admin = admin;
     }
 

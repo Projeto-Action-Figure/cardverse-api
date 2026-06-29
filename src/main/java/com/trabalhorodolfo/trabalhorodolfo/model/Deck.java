@@ -20,7 +20,7 @@ public class Deck {
     @NotBlank
     private String nome;
 
-    private Integer ativo;
+    private Boolean ativo;
 
     @Column(name = "data_criacao")
     private LocalDateTime dataCriacao;
@@ -35,7 +35,7 @@ public class Deck {
         }
 
         if (ativo == null) {
-            ativo = 0;
+            ativo = false;
         }
     }
 
@@ -51,7 +51,7 @@ public class Deck {
         return nome;
     }
 
-    public Integer getAtivo() {
+    public Boolean getAtivo() {
         return ativo;
     }
 
@@ -71,7 +71,7 @@ public class Deck {
         this.nome = nome;
     }
 
-    public void setAtivo(Integer ativo) {
+    public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
 

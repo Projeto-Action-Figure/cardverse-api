@@ -66,10 +66,10 @@ public class DeckService {
         List<Deck> decksDoUsuario = deckRepository.findByUsuarioId(usuarioId);
 
         for (Deck deck : decksDoUsuario) {
-            deck.setAtivo(0);
+            deck.setAtivo(false);
         }
 
-        deckAtivo.setAtivo(1);
+        deckAtivo.setAtivo(true);
 
         deckRepository.saveAll(decksDoUsuario);
 
